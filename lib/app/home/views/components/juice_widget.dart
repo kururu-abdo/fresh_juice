@@ -17,6 +17,14 @@ class JuiceWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40), 
 
+boxShadow:  [
+  BoxShadow(
+    offset: const Offset(0, 5) , 
+    color: const Color(0xFF594631).withOpacity(.45), 
+    spreadRadius: 1 , 
+    blurRadius: 3
+  )
+],
 
         gradient: const LinearGradient(colors: 
         
@@ -55,7 +63,7 @@ child: Center(child: Image.asset('assets/images/fav.png'),),
   )),
 
 Positioned(
-  top:80 ,
+  top:10 ,
   
   child: Padding(
     padding: const EdgeInsets.symmetric(
@@ -67,7 +75,7 @@ Positioned(
       children: [
     
     Center(
-    child: Image.asset(image! ,width: 400 , height: 150,),
+    child: Image.asset(image! ,width: 400 , height: 200,),
     )
     
     , 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fresh_corner/app/home/controller/app_state.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../common/utils/sizes.dart';
 
@@ -8,7 +10,8 @@ class MainContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size =MediaQuery.of(context).size;
-   
+       var provider = Provider.of<AppState>(context);
+
    return LayoutBuilder(
   builder: (_, c) {
     final width = c.maxWidth;
@@ -62,31 +65,37 @@ child: SingleChildScrollView(
                       children: [ 
                       
                       
-                      Container(
-                      height: 70, 
-                      width: 150,
-                      decoration:  BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                      // border: Border.all(width: 1)  ,  
-                      
-                      color: const Color(0xFF473525)
-                      ),
-                      child:   Center(
-              child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                child: Text('View Menu' ,  style: TextStyle(
-                  fontSize:
-                  getFontSize(context, 22)
-                  
-                  // isTablet(context)? 22: 15
-                  ,  fontWeight:
-                  
-                  
-                   FontWeight.w600  , 
-                   color: Colors.white
-                ),),
-              ),
-                      ),
+                      InkWell(
+
+                        onTap: (){
+                          provider.changePage(2);
+                        },
+                        child: Container(
+                        height: 70, 
+                        width: 150,
+                        decoration:  BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                        // border: Border.all(width: 1)  ,  
+                        
+                        color: const Color(0xFF473525)
+                        ),
+                        child:   Center(
+                                      child: FittedBox(
+                                          fit: BoxFit.scaleDown,
+                                        child: Text('View Menu' ,  style: TextStyle(
+                                          fontSize:
+                                          getFontSize(context, 22)
+                                          
+                                          // isTablet(context)? 22: 15
+                                          ,  fontWeight:
+                                          
+                                          
+                                           FontWeight.w600  , 
+                                           color: Colors.white
+                                        ),),
+                                      ),
+                        ),
+                        ),
                       )
                       ,
                       
