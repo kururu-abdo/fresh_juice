@@ -82,7 +82,7 @@ price: e['price'] as double,
 
 )
     ,  
-
+const SizedBox(height: 20,),
     const Align(
 
       alignment: AlignmentDirectional.centerEnd,
