@@ -29,7 +29,7 @@ child: const SingleChildScrollView(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [ 
   Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
   crossAxisAlignment: CrossAxisAlignment.start,
     children: [ 
   
